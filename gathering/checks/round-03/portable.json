@@ -1,0 +1,163 @@
+{
+  "passed": true,
+  "command": [
+    "python3",
+    "-B",
+    "review.py",
+    "demo"
+  ],
+  "copied_only": "shared/evidence-review",
+  "cwd": "test/scratch/portable-evidence-review",
+  "line_folders_available": false,
+  "receipt": {
+    "context": {
+      "note": "Matching anchors are provider consistency, not an atomic or finality proof.",
+      "same_closing_block_number": false,
+      "same_token": true,
+      "status": "separate observations"
+    },
+    "demo": "Retained real public-chain observations plus a synthetic unsigned ZTO envelope.",
+    "deterministic": true,
+    "evidence": [
+      {
+        "kind": "pinned-snapshot",
+        "path": "evidence/pinned-snapshot.json",
+        "sha256": "6205954971cff1f2a84540d86de17124f6f78bdbce60c56e84f0c0527c34b271",
+        "summary": {
+          "block_hash": "0xf76539e08b42037cad963c2af646774753fce06ad37245bd1487b9e6ffa549ba",
+          "block_number": "26177368",
+          "evidence_limits": "Provider observation with before/after block identity checks; not cryptographic proof, independent corroboration, or a guarantee of finality. A reorg between reads and back again can escape detection.",
+          "token": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+          "total_supply_base_units": "1000000000000000000000000000"
+        }
+      },
+      {
+        "kind": "transfer-comparison",
+        "path": "evidence/transfer-comparison.json",
+        "sha256": "43d6ef07339f5439ecfa6f931fdced5810ef32a9e6e09770136109fe50294e66",
+        "summary": {
+          "conflicts": 0,
+          "from_block": 26177298,
+          "metadata_differences": [],
+          "only_left": 0,
+          "only_right": 0,
+          "providers": [
+            "https://ethereum-rpc.publicnode.com",
+            "https://eth.drpc.org"
+          ],
+          "status": "agreement",
+          "to_block": 26177309,
+          "token": "ZTO",
+          "transfer_counts": [
+            3,
+            3
+          ]
+        }
+      },
+      {
+        "kind": "transfer-window",
+        "path": "evidence/transfer-window.json",
+        "sha256": "018eecf03d7064cfaa111d5cb33c818f84051ca91a9dcfb61d97a3229c4b861c",
+        "summary": {
+          "chain_id": 1,
+          "decimals": 18,
+          "from_block": 26177298,
+          "from_block_anchor": {
+            "hash": "0x6e2869a87c8365dff42c2c4b480d52bc5fbd09f326cea479038a7c24ed0557de",
+            "number": 26177298
+          },
+          "to_block": 26177309,
+          "to_block_anchor": {
+            "hash": "0x91e39454315d2b9798ed4feb71d980aba9175a78f75373468d6fab9990f56e15",
+            "number": 26177309
+          },
+          "token_address": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+          "transfer_count": 3
+        }
+      },
+      {
+        "kind": "unsigned-transaction",
+        "path": "evidence/unsigned-transaction.json",
+        "sha256": "aba37381a78ac320d15eda99087ddd684f0d0d96baed66d32dec6e140382787d",
+        "summary": {
+          "calldata": {
+            "arguments": {},
+            "candidateMethod": "totalSupply",
+            "selector": "0x18160ddd",
+            "status": "abi-pattern-match"
+          },
+          "destinationLabel": "ZTO",
+          "feeBudget": {
+            "gasFeeCapWei": "200000000000000",
+            "meaning": "Gas limit times maximum fee per gas; excludes token transfers. Not an estimate.",
+            "valuePlusGasFeeCapWei": "200000000000000"
+          },
+          "provenance": "synthetic unsigned demo",
+          "transaction": {
+            "accessList": [],
+            "calldataSelector": "0x18160ddd",
+            "chainId": "1",
+            "data": "0x18160ddd",
+            "gasLimit": "100000",
+            "maxFeePerGas": "2000000000",
+            "maxPriorityFeePerGas": "1000000000",
+            "nonce": "0",
+            "to": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+            "type": "EIP-1559",
+            "typeByte": "0x02",
+            "value": "0"
+          },
+          "warnings": [
+            "Offline inspection only: no chain state, simulation, sender or contract behavior verified.",
+            "Selectors can collide; an ABI pattern match does not prove ERC-20 behavior."
+          ]
+        }
+      }
+    ],
+    "integrity": {
+      "archive_bytes": 79876,
+      "archive_sha256": "6ff1ca065b5927ea0327854dccb0500dcc8f55f80db78ff98cb6dde53faa510b",
+      "file_count": 5,
+      "files": [
+        {
+          "bytes": 3926,
+          "path": "REVIEW.json",
+          "sha256": "047f1258c0854cd185614a6dede9ec37e74f907389ea4531b3299a53afcffe49"
+        },
+        {
+          "bytes": 58954,
+          "path": "evidence/pinned-snapshot.json",
+          "sha256": "6205954971cff1f2a84540d86de17124f6f78bdbce60c56e84f0c0527c34b271"
+        },
+        {
+          "bytes": 10723,
+          "path": "evidence/transfer-comparison.json",
+          "sha256": "43d6ef07339f5439ecfa6f931fdced5810ef32a9e6e09770136109fe50294e66"
+        },
+        {
+          "bytes": 4647,
+          "path": "evidence/transfer-window.json",
+          "sha256": "018eecf03d7064cfaa111d5cb33c818f84051ca91a9dcfb61d97a3229c4b861c"
+        },
+        {
+          "bytes": 165,
+          "path": "evidence/unsigned-transaction.json",
+          "sha256": "aba37381a78ac320d15eda99087ddd684f0d0d96baed66d32dec6e140382787d"
+        }
+      ],
+      "format": "handoff-inspection-v1",
+      "limits": {
+        "archive_bytes": 99000,
+        "files": 5,
+        "manifest_bytes": 99000,
+        "metadata_bytes": 99000,
+        "payload_bytes": 99000
+      },
+      "payload_bytes": 78415,
+      "trusted_digest_matched": false,
+      "verified": true
+    },
+    "limits": "Integrity and structural consistency only. Provider observations do not prove authenticity, completeness, independence or finality. Unsigned inspection does not establish simulation, inclusion or safety to sign.",
+    "schema": "evidence-review-receipt/1"
+  }
+}

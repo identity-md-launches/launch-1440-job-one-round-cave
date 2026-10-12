@@ -12,3 +12,37 @@ Use this image as the edit target. Preserve the entire existing cave, 1254x1254 
 
 The accepted second edit is the final PNG. The JPEG was resized and encoded from
 those final bytes by the standard-library helper; it was not generated separately.
+
+## Gathering 03 — Two Witnesses, One Knot
+
+Built-in image generation edited the recovered record-02 gathering wall.
+Reference SHA-256: e53d77dac9c1762b895aa8bff66ab138eff44e9e5cca68fac531718ffef31857.
+Generated cache identifier: 01a130fb-f566-7613-be8d-7efbb9b64278/exec-e9160437-2ea0-43cd-a909-b59239b9dd13.png.
+
+Prompt:
+
+> Edit this inherited square cave wall, preserving its exact square canvas,
+> warm rough rock, lighting, cracks, framing and every existing painted mark.
+> Preserve the existing Pepe frog, his face, torso, both five-digit hands (four
+> fingers and one thumb), the four colored bundled stones, and the torch and
+> scroll on the upper right completely unchanged. Add only a SMALL primitive
+> cave motif in the empty upper-middle rock, bounding box x=320 to 660, y=150
+> to 295 on this 1254x1254 wall: two small irregular oval witness stones outlined
+> by worn charcoal and a little yellow ochre, side by side, each with a thin
+> crooked ochre cord running down to a shared knot between them, with a tiny
+> chalk dot inside each oval. This symbolizes two witnesses tied into one
+> verified bundle. All new marks flat hand made prehistoric pigment, stone
+> showing through, spare uneven burnt-stick strokes, earth colors only red
+> ochre yellow ochre charcoal chalk. No new Pepe or hands or handprints. No
+> letters, numerals, captions, signatures, logos, watermarks, borders or frames.
+> Do not cover or move any ancestral mark. Only the specified small upper-middle
+> area changes; everything else exactly as reference.
+
+The generated motif landed slightly farther right than requested. The whole
+new motif is inside the actual vacant patch x=450, y=150, width=270, height=156.
+`compose_mark.py` keeps only that patch and fades its edge over 12 pixels; all
+other pixels are from the unchanged ancestor. Only one image was generated.
+Intermediate patch inspection was in memory, without extra workspace pictures.
+Final review: both ancestral scenes preserved; two five-digit hands; no forbidden
+text or symbols observed. Exact preservation results are in
+`checks/round-03/image-preservation.json`.

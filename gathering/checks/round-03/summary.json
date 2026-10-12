@@ -1,0 +1,132 @@
+[
+  {
+    "command": [
+      "line-1/tools/snapshot-check/test_checks.py"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "line-1/tools/pinned-snapshot/test_pinned.py"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "line-2/tools/handoff/handoff.py",
+      "demo"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "line-2/tools/handoff/handoff.py",
+      "verify",
+      "line-2/handoff.zip"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "line-2/tools/handoff-inspect/test_inspect.py"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "line-2/tools/handoff-inspect/inspect_handoff.py",
+      "demo"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "line-2/tools/handoff-compare/test_compare.py"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "line-2/tools/handoff-compare/compare_handoff.py",
+      "demo"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "line-3/tools/zto-eip1559-decoder/test_decoder.py"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "line-3/tools/zto-eip1559-decoder/tx_decode.py",
+      "--demo"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "line-3/tools/erc20-intent/test_intent.py"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "line-3/tools/erc20-intent/intent.py",
+      "--demo"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "line-4/tools/erc20-transfer-window/test_transfer_window.py"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "line-4/tools/transfer-crosscheck/test_crosscheck.py"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "line-4/tools/transfer-crosscheck/crosscheck.py",
+      "--demo"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "shared/evidence-handoff/test_bundle.py"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "shared/evidence-handoff/bundle.py",
+      "demo"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "shared/tx-preflight/test_preflight.py"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "shared/tx-preflight/preflight.py",
+      "demo"
+    ],
+    "exit": 0
+  },
+  {
+    "command": [
+      "gathering/review_checks.py"
+    ],
+    "exit": 0
+  }
+]

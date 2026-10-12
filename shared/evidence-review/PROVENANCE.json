@@ -1,0 +1,67 @@
+{
+  "sources": [
+    {
+      "source": "line-1/tools/rpc-snapshot/rpc_snapshot.py",
+      "source_sha256": "16ffb5b070f2d71e87cbce3e3e1a1bd19a07a6b93a29e632d3d3f37226888356",
+      "copy": "vendor/rpc-snapshot/rpc_snapshot.py",
+      "changes": "Endpoint policy amendment only.",
+      "copy_sha256": "e172694a97d52f45fedbc8a54ec2ea600d249a446a7873b918449d896fde1a56"
+    },
+    {
+      "source": "line-1/tools/pinned-snapshot/pinned_snapshot.py",
+      "source_sha256": "8e9cc6481b2826291cb177e09b247aac15d8912b31f0569bf5cb96d19f826134",
+      "copy": "vendor/pinned-snapshot/pinned_snapshot.py",
+      "changes": "Endpoint policy amendment only.",
+      "copy_sha256": "3bc38e15ec3601c571c31ff2e485bd95e30564f753816b82df197fe0cc7ca82a"
+    },
+    {
+      "source": "line-2/tools/handoff/handoff.py",
+      "source_sha256": "0b3878b76c13a18951601aef2ec48daf8c56fbb195fea953be797a7f1d8df97d",
+      "copy": "vendor/handoff/handoff.py",
+      "changes": "Byte-for-byte copy.",
+      "copy_sha256": "0b3878b76c13a18951601aef2ec48daf8c56fbb195fea953be797a7f1d8df97d"
+    },
+    {
+      "source": "line-2/tools/handoff-inspect/inspect_handoff.py",
+      "source_sha256": "62cc8e4b31c231eb394bd5f3053c2db29c05fc4fa62d3aeafe76027a52b8103a",
+      "copy": "vendor/handoff-inspect/inspect_handoff.py",
+      "changes": "Byte-for-byte copy.",
+      "copy_sha256": "62cc8e4b31c231eb394bd5f3053c2db29c05fc4fa62d3aeafe76027a52b8103a"
+    },
+    {
+      "source": "line-3/tools/zto-eip1559-decoder/tx_decode.py",
+      "source_sha256": "c5d852004603011b890a991d6ef988093d1974df00c48549de8f076029146757",
+      "copy": "vendor/zto-eip1559-decoder/tx_decode.py",
+      "changes": "Byte-for-byte copy.",
+      "copy_sha256": "c5d852004603011b890a991d6ef988093d1974df00c48549de8f076029146757"
+    },
+    {
+      "source": "line-3/tools/erc20-intent/intent.py",
+      "source_sha256": "5502c5be013a0e7f1c6226627fe6feee3d732175bfc328f413e7d49fc22ec101",
+      "copy": "vendor/erc20-intent/intent.py",
+      "changes": "Byte-for-byte copy.",
+      "copy_sha256": "5502c5be013a0e7f1c6226627fe6feee3d732175bfc328f413e7d49fc22ec101"
+    },
+    {
+      "source": "line-4/tools/erc20-transfer-window/transfer_window.py",
+      "source_sha256": "2c6ad8509b3dad22d7675f631078c480a657776b7be442902e88a2522a3823c7",
+      "copy": "vendor/erc20-transfer-window/transfer_window.py",
+      "changes": "Endpoint policy amendment only.",
+      "copy_sha256": "c6f513dacd210c5241ba6fc8bf0fd0bb6ac392065965c63f5033b22c6b8accc6"
+    },
+    {
+      "source": "line-4/tools/transfer-crosscheck/crosscheck.py",
+      "source_sha256": "fc8004d409356cde4ba1d47117f0b58a43d2ed6555f129be60267176869c6a49",
+      "copy": "vendor/transfer-crosscheck/crosscheck.py",
+      "changes": "Byte-for-byte copy.",
+      "copy_sha256": "fc8004d409356cde4ba1d47117f0b58a43d2ed6555f129be60267176869c6a49"
+    }
+  ],
+  "endpoint_amendments": "Only vendored capture endpoint policies are extended to credential-free HTTP at numeric loopback 127.0.0.1, explicit port, exact /rpc/1. Original line folders remain unchanged.",
+  "example_provenance": {
+    "pinned-snapshot.json": "Byte copy of line-1/tools/pinned-snapshot/example-zto.json; dated real PublicNode observation.",
+    "transfer-window.json": "Byte copy of line-4/tools/transfer-crosscheck/publicnode.json; dated real window.",
+    "transfer-comparison.json": "Actual stdout of line-4/tools/transfer-crosscheck/crosscheck.py --demo; both retained real observations.",
+    "unsigned-transaction.json": "Original Line 3 demo RLP, wrapped with explicit synthetic unsigned demo provenance; never sent."
+  }
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Offline structural checks for gathering 02; never writes or uses the network."""
+"""Offline structural checks for gathering 03; never writes or uses the network."""
 import hashlib
 from html.parser import HTMLParser
 import json
@@ -94,13 +94,13 @@ def main():
     goals = json.loads(Path("dist/goals.json").read_text())
     assert goals == [{"line": n, "goal": Path(f"line-{n}/GOAL.md").read_text().strip()}
                      for n in range(1,5)]
-    png = Path("artifacts/gathering/wall-v2.png").read_bytes()
+    png = Path("artifacts/gathering/wall-v3.png").read_bytes()
     assert Path("artifacts/gathering/wall.png").read_bytes() == png
-    jpg = Path("dist/gathering/02.jpg").read_bytes()
+    jpg = Path("dist/gathering/03.jpg").read_bytes()
     assert png_dimensions(png) == (1254,1254)
     assert jpeg_dimensions(jpg) == (512,512)
-    record = json.loads(Path("dist/gathering/02.json").read_text())
-    check_painted(record, "Gathering", 2)
+    record = json.loads(Path("dist/gathering/03.json").read_text())
+    check_painted(record, "Gathering", 3)
     assert record["image"] == "https://api.imd.fun/artifacts/" + hashlib.sha256(png).hexdigest()
     attrs = record["attributes"]
     assert attrs[-1]["value"] == "Gathering"
@@ -139,6 +139,14 @@ def main():
     assert Path("gathering/COINS.md").read_text().splitlines()[0] == "none"
     assert not Path("gathering/coin-order.json").exists()
     assert not Path("gathering/deploy-order.json").exists()
+    preservation = json.loads(Path("gathering/checks/round-03/image-preservation.json").read_text())
+    assert preservation["changed_pixels_outside_rectangle"] == 0
+    assert preservation["wall_sha256"] == hashlib.sha256(png).hexdigest()
+    assert preservation["source_sha256"] == json.loads(Path("dist/gathering/02.json").read_text())["image"].split("/")[-1]
+    provenance = json.loads(Path("shared/evidence-review/PROVENANCE.json").read_text())
+    for item in provenance["sources"]:
+        assert hashlib.sha256(Path(item["source"]).read_bytes()).hexdigest() == item["source_sha256"]
+        assert hashlib.sha256((Path("shared/evidence-review") / item["copy"]).read_bytes()).hexdigest() == item["copy_sha256"]
     print(json.dumps({"passed": True, "line_files_unchanged": len(actual), "goals": 4,
                       "records": len(records), "painted": painted, "placeholders": placeholders,
                       "png": "1254x1254 RGB", "jpeg": "512x512 baseline color",

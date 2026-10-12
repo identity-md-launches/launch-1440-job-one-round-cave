@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "gathering/check_deliverable.py"
+  ],
+  "exit": 0,
+  "expected_exit": 0,
+  "passed": true,
+  "stdout": "{\n  \"passed\": true,\n  \"line_files_unchanged\": 61,\n  \"goals\": 4,\n  \"records\": 113,\n  \"painted\": 15,\n  \"placeholders\": 98,\n  \"png\": \"1254x1254 RGB\",\n  \"jpeg\": \"512x512 baseline color\",\n  \"wall_sha256\": \"dceafc14303f22e203ee0ba20b812094d33ed9c2d0bd7575a1af182b90456f0e\",\n  \"visual_review\": \"See gathering/README.md; not certified by this checker.\"\n}\n",
+  "stderr": ""
+}

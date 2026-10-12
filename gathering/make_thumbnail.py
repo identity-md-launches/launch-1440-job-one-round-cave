@@ -167,7 +167,7 @@ def jpeg(pixels):
 
 if __name__ == '__main__':
     source = Path('artifacts/gathering/wall.png')
-    target = Path('dist/gathering/01.jpg')
+    target = Path('dist/gathering/03.jpg')
     width,height,rows = png_rgb(source.read_bytes())
     encoded = jpeg(resize(width,height,rows))
     if len(encoded)>=100000:

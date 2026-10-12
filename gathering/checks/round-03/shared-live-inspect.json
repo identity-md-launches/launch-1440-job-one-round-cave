@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "shared/evidence-review/review.py",
+    "inspect",
+    "gathering/checks/round-03/live-review.zip",
+    "--sha256",
+    "12933b8a5b456d08f6d5086b6ab6132e1a5f4640c355abb43ea52809bf02da44"
+  ],
+  "stdin_file": null,
+  "exit": 0,
+  "expected_exit": 0,
+  "passed": true,
+  "stdout": "{\n  \"context\": {\n    \"note\": \"Matching anchors are provider consistency, not an atomic or finality proof.\",\n    \"same_closing_block_number\": true,\n    \"same_token\": true,\n    \"status\": \"matching closing anchor\"\n  },\n  \"evidence\": [\n    {\n      \"kind\": \"pinned-snapshot\",\n      \"path\": \"evidence/pinned-snapshot.json\",\n      \"sha256\": \"51711037789b9ad0cf5dc40b86584e0f36238e3f9ec1aae46eb12bbf6a0aeb51\",\n      \"summary\": {\n        \"block_hash\": \"0x832d4c6e4af9e0834a7dd1e4d5ce2512fe7afe1cbe01afc2f1cd92249109d77f\",\n        \"block_number\": \"26177592\",\n        \"evidence_limits\": \"Provider observation with before/after block identity checks; not cryptographic proof, independent corroboration, or a guarantee of finality. A reorg between reads and back again can escape detection.\",\n        \"token\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\n        \"total_supply_base_units\": \"1000000000000000000000000000\"\n      }\n    },\n    {\n      \"kind\": \"transfer-window\",\n      \"path\": \"evidence/transfer-window.json\",\n      \"sha256\": \"1fa98c4d3460eccf18d338b039719ad3211c03b1ecbec41b2a0443056b23f8f6\",\n      \"summary\": {\n        \"chain_id\": 1,\n        \"decimals\": 18,\n        \"from_block\": 26177581,\n        \"from_block_anchor\": {\n          \"hash\": \"0xa4ad3ffbe5c36cf9d34da524a81429884bd5dc040a082ad352620a7ae1362893\",\n          \"number\": 26177581\n        },\n        \"to_block\": 26177592,\n        \"to_block_anchor\": {\n          \"hash\": \"0x832d4c6e4af9e0834a7dd1e4d5ce2512fe7afe1cbe01afc2f1cd92249109d77f\",\n          \"number\": 26177592\n        },\n        \"token_address\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\n        \"transfer_count\": 0\n      }\n    }\n  ],\n  \"integrity\": {\n    \"archive_bytes\": 71992,\n    \"archive_sha256\": \"12933b8a5b456d08f6d5086b6ab6132e1a5f4640c355abb43ea52809bf02da44\",\n    \"file_count\": 3,\n    \"files\": [\n      {\n        \"bytes\": 1916,\n        \"path\": \"REVIEW.json\",\n        \"sha256\": \"0072f19766305289ec14dcab31e894b835471359f9d948d26497b7ff05469052\"\n      },\n      {\n        \"bytes\": 68273,\n        \"path\": \"evidence/pinned-snapshot.json\",\n        \"sha256\": \"51711037789b9ad0cf5dc40b86584e0f36238e3f9ec1aae46eb12bbf6a0aeb51\"\n      },\n      {\n        \"bytes\": 898,\n        \"path\": \"evidence/transfer-window.json\",\n        \"sha256\": \"1fa98c4d3460eccf18d338b039719ad3211c03b1ecbec41b2a0443056b23f8f6\"\n      }\n    ],\n    \"format\": \"handoff-inspection-v1\",\n    \"limits\": {\n      \"archive_bytes\": 99000,\n      \"files\": 5,\n      \"manifest_bytes\": 99000,\n      \"metadata_bytes\": 99000,\n      \"payload_bytes\": 99000\n    },\n    \"payload_bytes\": 71087,\n    \"trusted_digest_matched\": true,\n    \"verified\": true\n  },\n  \"limits\": \"Integrity and structural consistency only. Provider observations do not prove authenticity, completeness, independence or finality. Unsigned inspection does not establish simulation, inclusion or safety to sign.\",\n  \"schema\": \"evidence-review-receipt/1\"\n}\n",
+  "stderr": ""
+}

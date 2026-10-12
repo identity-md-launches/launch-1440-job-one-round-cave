@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "tracked_changed_paths": [
+    "dist/gathering/03.json",
+    "dist/index.html",
+    "gathering/COINS.md",
+    "gathering/IMAGE-PROMPTS.md",
+    "gathering/README.md",
+    "gathering/REPORT.md",
+    "gathering/check_deliverable.py",
+    "gathering/line-source-hashes.json",
+    "gathering/make_thumbnail.py",
+    "shared/README.md"
+  ],
+  "new_source_files": 59,
+  "ancestral_dist_files_unchanged": 128,
+  "named_output_untracked": true,
+  "all_nonartifact_files_under_100kb": true,
+  "png_bytes": 3848725,
+  "jpeg_bytes": 67515,
+  "sha256": "dceafc14303f22e203ee0ba20b812094d33ed9c2d0bd7575a1af182b90456f0e"
+}

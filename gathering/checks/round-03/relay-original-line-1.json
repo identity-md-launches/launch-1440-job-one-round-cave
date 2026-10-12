@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-1/tools/rpc-snapshot/rpc_snapshot.py",
+    "--rpc",
+    "http://127.0.0.1:44117/rpc/1"
+  ],
+  "stdin_file": null,
+  "exit": 1,
+  "expected_exit": 1,
+  "passed": true,
+  "stdout": "",
+  "stderr": "rpc-snapshot: RPC endpoint must use HTTPS\n"
+}

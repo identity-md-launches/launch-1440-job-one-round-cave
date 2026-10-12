@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-4/tools/erc20-transfer-window/transfer_window.py",
+    "--rpc",
+    "http://127.0.0.1:44117/rpc/1"
+  ],
+  "stdin_file": null,
+  "exit": 2,
+  "expected_exit": 2,
+  "passed": true,
+  "stdout": "",
+  "stderr": "transfer-window: invalid RPC endpoint: public HTTPS endpoint without credentials/query/fragment required\n"
+}

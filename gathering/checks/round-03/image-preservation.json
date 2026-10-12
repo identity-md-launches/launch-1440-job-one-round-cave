@@ -1,0 +1,15 @@
+{
+  "source_sha256": "e53d77dac9c1762b895aa8bff66ab138eff44e9e5cca68fac531718ffef31857",
+  "rectangle": {
+    "x": 450,
+    "y": 150,
+    "width": 270,
+    "height": 156
+  },
+  "edge_fade_pixels": 12,
+  "changed_pixels": 40635,
+  "changed_pixels_outside_rectangle": 0,
+  "preserved_pixels_outside_rectangle": 1530396,
+  "wall_sha256": "dceafc14303f22e203ee0ba20b812094d33ed9c2d0bd7575a1af182b90456f0e",
+  "compositing": "ffmpeg crop, edge alpha and overlay; no outside pixel changed"
+}

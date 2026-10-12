@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "shared/evidence-review/review.py",
+    "pack",
+    "test/scratch/review-03-cli.zip",
+    "--unsigned-transaction",
+    "shared/evidence-review/examples/unsigned-transaction.json"
+  ],
+  "exit": 1,
+  "expected_exit": 1,
+  "passed": true,
+  "stdout": "",
+  "stderr": "evidence-review: output already exists\n"
+}

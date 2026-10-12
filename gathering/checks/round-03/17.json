@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "shared/evidence-handoff/bundle.py",
+    "demo"
+  ],
+  "exit": 0,
+  "checked_at": "2026-10-12T16:41:38.758968+00:00",
+  "stdout": "{\"bytes\": 2771, \"deterministic\": true, \"example_data\": \"Recorded public ZTO reads and a synthetic unsigned decoder demonstration.\", \"files\": 4, \"kinds\": [\"snapshot\", \"transaction\", \"transfers\"], \"notice\": \"Checksums establish byte integrity, not chain truth, completeness, finality, or transaction validity.\", \"sha256\": \"6463156697c45336dfdcab056ae939d33a5e18ba0af644dfb1bef2f6d395df68\", \"verified\": true}\n",
+  "stderr": ""
+}

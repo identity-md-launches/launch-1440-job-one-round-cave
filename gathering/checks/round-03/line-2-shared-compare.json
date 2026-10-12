@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-2/tools/handoff-compare/compare_handoff.py",
+    "compare",
+    "test/scratch/review-03-cli.zip",
+    "test/scratch/review-03-cli.zip",
+    "--fail-on-change"
+  ],
+  "exit": 0,
+  "expected_exit": 0,
+  "passed": true,
+  "stdout": "{\n  \"added\": [],\n  \"after\": {\n    \"archive_bytes\": 79876,\n    \"archive_sha256\": \"6ff1ca065b5927ea0327854dccb0500dcc8f55f80db78ff98cb6dde53faa510b\",\n    \"file_count\": 5,\n    \"payload_bytes\": 78415,\n    \"trusted_digest_matched\": false\n  },\n  \"before\": {\n    \"archive_bytes\": 79876,\n    \"archive_sha256\": \"6ff1ca065b5927ea0327854dccb0500dcc8f55f80db78ff98cb6dde53faa510b\",\n    \"file_count\": 5,\n    \"payload_bytes\": 78415,\n    \"trusted_digest_matched\": false\n  },\n  \"counts\": {\n    \"added\": 0,\n    \"modified\": 0,\n    \"removed\": 0,\n    \"unchanged\": 5\n  },\n  \"format\": \"handoff-comparison-v1\",\n  \"modified\": [],\n  \"note\": \"Integrity is not authenticity without independently trusted archive hashes. Renames are reported as removal plus addition; payload code is never executed.\",\n  \"payload_byte_delta\": 0,\n  \"removed\": [],\n  \"same_archive\": true,\n  \"same_payload\": true,\n  \"unchanged\": [\n    \"REVIEW.json\",\n    \"evidence/pinned-snapshot.json\",\n    \"evidence/transfer-comparison.json\",\n    \"evidence/transfer-window.json\",\n    \"evidence/unsigned-transaction.json\"\n  ],\n  \"verified\": true\n}\n",
+  "stderr": ""
+}

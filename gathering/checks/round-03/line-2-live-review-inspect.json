@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-2/tools/handoff-inspect/inspect_handoff.py",
+    "inspect",
+    "gathering/checks/round-03/live-review.zip"
+  ],
+  "stdin_file": null,
+  "exit": 0,
+  "expected_exit": 0,
+  "passed": true,
+  "stdout": "{\n  \"archive_bytes\": 71992,\n  \"archive_sha256\": \"12933b8a5b456d08f6d5086b6ab6132e1a5f4640c355abb43ea52809bf02da44\",\n  \"file_count\": 3,\n  \"files\": [\n    {\n      \"bytes\": 1916,\n      \"path\": \"REVIEW.json\",\n      \"sha256\": \"0072f19766305289ec14dcab31e894b835471359f9d948d26497b7ff05469052\"\n    },\n    {\n      \"bytes\": 68273,\n      \"path\": \"evidence/pinned-snapshot.json\",\n      \"sha256\": \"51711037789b9ad0cf5dc40b86584e0f36238e3f9ec1aae46eb12bbf6a0aeb51\"\n    },\n    {\n      \"bytes\": 898,\n      \"path\": \"evidence/transfer-window.json\",\n      \"sha256\": \"1fa98c4d3460eccf18d338b039719ad3211c03b1ecbec41b2a0443056b23f8f6\"\n    }\n  ],\n  \"format\": \"handoff-inspection-v1\",\n  \"limits\": {\n    \"archive_bytes\": 69206016,\n    \"files\": 1000,\n    \"manifest_bytes\": 524288,\n    \"metadata_bytes\": 524288,\n    \"payload_bytes\": 67108864\n  },\n  \"payload_bytes\": 71087,\n  \"trusted_digest_matched\": false,\n  \"verified\": true\n}\n",
+  "stderr": ""
+}

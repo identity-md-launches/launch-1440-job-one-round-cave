@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-2/tools/handoff/handoff.py",
+    "verify",
+    "test/scratch/review-03-cli.zip"
+  ],
+  "exit": 0,
+  "expected_exit": 0,
+  "passed": true,
+  "stdout": "{\"bytes\": 78415, \"files\": 5, \"sha256\": \"6ff1ca065b5927ea0327854dccb0500dcc8f55f80db78ff98cb6dde53faa510b\", \"verified\": true}\n",
+  "stderr": ""
+}

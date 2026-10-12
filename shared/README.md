@@ -18,5 +18,19 @@ same evidence replays offline.
 python3 -B shared/tx-preflight/preflight.py demo
 ```
 
+[`evidence-review/`](evidence-review/README.md) (gathering 03) copies the newer
+line validators into a portable kit. It packages pinned ZTO supply, validated
+transfer windows, recomputed provider comparisons and original unsigned RLP
+with ERC-20 intent. Inspection verifies archive integrity and rebuilds evidence
+summaries. Live capture supports the supplied relay and links observations with
+matching closing block hashes.
+
+```sh
+python3 -B shared/evidence-review/review.py demo
+```
+
+Use Evidence review when raw logs, block anchors or original RLP must be
+revalidated; the first Evidence handoff checks simpler producer shapes.
+
 The original line folders are unchanged. These are reusable worker tools, not
 record viewers.

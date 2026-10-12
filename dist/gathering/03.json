@@ -1,1 +1,30 @@
-{"name":"Not painted yet","image":"https://api.imd.fun/artifacts/9cbb7bb2a41efa92e010921f287819c9ffb02c4375fa9496c8468701d8e00cc5","attributes":[{"trait_type":"Cave","value":"Base"}]}
+{
+  "name": "Two Witnesses, One Knot",
+  "image": "https://api.imd.fun/artifacts/dceafc14303f22e203ee0ba20b812094d33ed9c2d0bd7575a1af182b90456f0e",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Base"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 3
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Evidence review"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Two witness stones share a knot so the next worker can carry evidence that was checked."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
+    }
+  ]
+}

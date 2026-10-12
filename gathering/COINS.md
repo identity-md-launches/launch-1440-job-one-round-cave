@@ -1,10 +1,12 @@
 none
 
-The four lines capture public Ethereum evidence, package files, decode unsigned
-transactions, and read bounded ERC-20 transfer windows. All work without a new
-coin, paid service, protocol fee or deployed contract. ZTO already supplies the
-real token used by the snapshot and transfer examples, with IMD available as the
-second token. A new coin or Uniswap v4 hook would not enable any missing function.
+The four lines capture public Ethereum observations, verify offline handoffs,
+inspect unsigned transactions and read bounded ERC-20 windows. All function
+without a new coin, hook, paid service or protocol fee. The shared Evidence
+review kit also works offline; its optional live reads use the existing ZTO
+contract. IMD is available as the second token. Neither this kit nor any line
+needs a separate currency to exist or work.
 
-There is no launch order and no deploy order. No request-check POST, payment,
-signature, wallet access or transaction was needed or performed.
+No coin request, launch order or deploy order is proposed. These Python-only
+tools supply no contract needing a Sepolia deployment. No request-check POST,
+wallet access, signing, transaction submission, payment or deployment occurred.

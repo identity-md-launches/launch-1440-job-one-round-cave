@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-2/tools/handoff/handoff.py",
+    "pack",
+    "line-2/tools/handoff",
+    "test/scratch/line2-current-03.zip"
+  ],
+  "exit": 0,
+  "expected_exit": 0,
+  "passed": true,
+  "stdout": "{\"bytes\": 12603, \"files\": 2, \"output\": \"test/scratch/line2-current-03.zip\", \"sha256\": \"aaa03a258268263186f610e17ad8ede6851c8597b70a7ec29ae6b283f72f60bb\", \"verified\": true}\n",
+  "stderr": ""
+}
