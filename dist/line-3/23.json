@@ -1,0 +1,30 @@
+{
+  "name": "Pepe Weighs the Scroll",
+  "image": "https://api.imd.fun/artifacts/d6a30c3e2d564f2382497f84078e5f2c52572d022b3c85d53ed4eac22c5b01c5",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Base"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 3"
+    },
+    {
+      "trait_type": "Number",
+      "value": 23
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "erc20-intent"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe weighs a scroll’s promises before granting tokens or paying its cost."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Offline EIP-1559 transaction decoding"
+    }
+  ]
+}
