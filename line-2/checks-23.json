@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/handoff-compare/test_compare.py"
+      ],
+      "workspace": ".",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_all_four_categories (__main__.Comparisons.test_all_four_categories) ... ok\ntest_budget (__main__.Comparisons.test_budget) ... ok\ntest_cli_changed_payload_exit_two (__main__.Comparisons.test_cli_changed_payload_exit_two) ... ok\ntest_cli_no_report_on_invalid_second_archive (__main__.Comparisons.test_cli_no_report_on_invalid_second_archive) ... ok\ntest_cli_same_payload_exit_zero (__main__.Comparisons.test_cli_same_payload_exit_zero) ... ok\ntest_cli_subprocess (__main__.Comparisons.test_cli_subprocess) ... ok\ntest_deterministic_sorted_report (__main__.Comparisons.test_deterministic_sorted_report) ... ok\ntest_invalid_digest (__main__.Comparisons.test_invalid_digest) ... ok\ntest_real_archive_interoperability (__main__.Comparisons.test_real_archive_interoperability) ... ok\ntest_real_source_demo (__main__.Comparisons.test_real_source_demo) ... ok\ntest_rename_is_remove_add (__main__.Comparisons.test_rename_is_remove_add) ... ok\ntest_same_archive (__main__.Comparisons.test_same_archive) ... ok\ntest_same_payload_different_zip_metadata (__main__.Comparisons.test_same_payload_different_zip_metadata) ... ok\ntest_symlink_refused (__main__.Comparisons.test_symlink_refused) ... ok\ntest_tampering_with_valid_crc_is_rejected (__main__.Comparisons.test_tampering_with_valid_crc_is_rejected) ... ok\ntest_trusted_digest (__main__.Comparisons.test_trusted_digest) ... ok\ntest_unicode_and_empty_files (__main__.Comparisons.test_unicode_and_empty_files) ... ok\ntest_workspace_path_guard (__main__.Comparisons.test_workspace_path_guard) ... ok\ntest_wrong_digest (__main__.Comparisons.test_wrong_digest) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.169s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/handoff-inspect/test_inspect.py"
+      ],
+      "workspace": ".",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "...................\n----------------------------------------------------------------------\nRan 19 tests in 0.023s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/handoff/handoff.py",
+        "demo"
+      ],
+      "workspace": ".",
+      "exit_code": 0,
+      "stdout": "{\"bytes\": 47, \"deterministic\": true, \"files\": 2, \"sha256\": \"c4c6347ac82b95216670f9bbf88a8d2e9ff741721dd35d6113d8c25d0dddc524\", \"tampering_rejected\": true, \"verified\": true}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/handoff-compare/compare_handoff.py",
+        "demo"
+      ],
+      "workspace": ".",
+      "exit_code": 0,
+      "stdout": "{\n  \"added\": [\n    {\n      \"bytes\": 42,\n      \"path\": \"PROPOSED-HANDOFF-NOTE.md\",\n      \"sha256\": \"41cb9f38d4c1bc9e7a6b74dcd71b4ee02ae6f6959c5429a4b0a47b3fc7f0d321\"\n    }\n  ],\n  \"after\": {\n    \"archive_bytes\": 13470,\n    \"archive_sha256\": \"9209579ba85e9bc81c51fdb66319a1e7769d2e51e8c9f5bc2dcca11d52edb64a\",\n    \"file_count\": 3,\n    \"payload_bytes\": 12645,\n    \"trusted_digest_matched\": false\n  },\n  \"before\": {\n    \"archive_bytes\": 13181,\n    \"archive_sha256\": \"aaa03a258268263186f610e17ad8ede6851c8597b70a7ec29ae6b283f72f60bb\",\n    \"file_count\": 2,\n    \"payload_bytes\": 12603,\n    \"trusted_digest_matched\": false\n  },\n  \"counts\": {\n    \"added\": 1,\n    \"modified\": 0,\n    \"removed\": 0,\n    \"unchanged\": 2\n  },\n  \"demo\": \"real inherited bundle versus an in-memory proposed note addition\",\n  \"format\": \"handoff-comparison-v1\",\n  \"modified\": [],\n  \"note\": \"Integrity is not authenticity without independently trusted archive hashes. Renames are reported as removal plus addition; payload code is never executed.\",\n  \"payload_byte_delta\": 42,\n  \"removed\": [],\n  \"same_archive\": false,\n  \"same_payload\": false,\n  \"unchanged\": [\n    \"README.md\",\n    \"handoff.py\"\n  ],\n  \"verified\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/handoff-compare/compare_handoff.py",
+        "compare",
+        "line-2/handoff.zip",
+        "line-2/handoff-inspect.zip"
+      ],
+      "workspace": ".",
+      "exit_code": 0,
+      "stdout": "{\n  \"added\": [\n    {\n      \"bytes\": 14056,\n      \"path\": \"inspect_handoff.py\",\n      \"sha256\": \"62cc8e4b31c231eb394bd5f3053c2db29c05fc4fa62d3aeafe76027a52b8103a\"\n    },\n    {\n      \"bytes\": 10738,\n      \"path\": \"test_inspect.py\",\n      \"sha256\": \"2abd99e6bbf72e2b4f4c572891d4ad61d4c5913241efd4818a78e0d4430d5048\"\n    }\n  ],\n  \"after\": {\n    \"archive_bytes\": 30555,\n    \"archive_sha256\": \"f8ef2f1a11233fc4bb887a944b891b3274abf33fa6811d74d1c719b676a21cae\",\n    \"file_count\": 3,\n    \"payload_bytes\": 29729,\n    \"trusted_digest_matched\": false\n  },\n  \"before\": {\n    \"archive_bytes\": 13181,\n    \"archive_sha256\": \"aaa03a258268263186f610e17ad8ede6851c8597b70a7ec29ae6b283f72f60bb\",\n    \"file_count\": 2,\n    \"payload_bytes\": 12603,\n    \"trusted_digest_matched\": false\n  },\n  \"counts\": {\n    \"added\": 2,\n    \"modified\": 1,\n    \"removed\": 1,\n    \"unchanged\": 0\n  },\n  \"format\": \"handoff-comparison-v1\",\n  \"modified\": [\n    {\n      \"after\": {\n        \"bytes\": 4935,\n        \"sha256\": \"3f9211d44ae02e76b8ef57e4204cda695e3aaf66dc642e999b07f804bbd707c8\"\n      },\n      \"before\": {\n        \"bytes\": 2780,\n        \"sha256\": \"930a0c0147a5e4a5a749a08d4c49656aa149126611d771e60864c85c015aafc2\"\n      },\n      \"path\": \"README.md\"\n    }\n  ],\n  \"note\": \"Integrity is not authenticity without independently trusted archive hashes. Renames are reported as removal plus addition; payload code is never executed.\",\n  \"payload_byte_delta\": 17126,\n  \"removed\": [\n    {\n      \"bytes\": 9823,\n      \"path\": \"handoff.py\",\n      \"sha256\": \"0b3878b76c13a18951601aef2ec48daf8c56fbb195fea953be797a7f1d8df97d\"\n    }\n  ],\n  \"same_archive\": false,\n  \"same_payload\": false,\n  \"unchanged\": [],\n  \"verified\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/handoff-compare/test_compare.py"
+      ],
+      "workspace": "test/scratch/line2-source-check",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_all_four_categories (__main__.Comparisons.test_all_four_categories) ... ok\ntest_budget (__main__.Comparisons.test_budget) ... ok\ntest_cli_changed_payload_exit_two (__main__.Comparisons.test_cli_changed_payload_exit_two) ... ok\ntest_cli_no_report_on_invalid_second_archive (__main__.Comparisons.test_cli_no_report_on_invalid_second_archive) ... ok\ntest_cli_same_payload_exit_zero (__main__.Comparisons.test_cli_same_payload_exit_zero) ... ok\ntest_cli_subprocess (__main__.Comparisons.test_cli_subprocess) ... ok\ntest_deterministic_sorted_report (__main__.Comparisons.test_deterministic_sorted_report) ... ok\ntest_invalid_digest (__main__.Comparisons.test_invalid_digest) ... ok\ntest_real_archive_interoperability (__main__.Comparisons.test_real_archive_interoperability) ... ok\ntest_real_source_demo (__main__.Comparisons.test_real_source_demo) ... ok\ntest_rename_is_remove_add (__main__.Comparisons.test_rename_is_remove_add) ... ok\ntest_same_archive (__main__.Comparisons.test_same_archive) ... ok\ntest_same_payload_different_zip_metadata (__main__.Comparisons.test_same_payload_different_zip_metadata) ... ok\ntest_symlink_refused (__main__.Comparisons.test_symlink_refused) ... ok\ntest_tampering_with_valid_crc_is_rejected (__main__.Comparisons.test_tampering_with_valid_crc_is_rejected) ... ok\ntest_trusted_digest (__main__.Comparisons.test_trusted_digest) ... ok\ntest_unicode_and_empty_files (__main__.Comparisons.test_unicode_and_empty_files) ... ok\ntest_workspace_path_guard (__main__.Comparisons.test_workspace_path_guard) ... ok\ntest_wrong_digest (__main__.Comparisons.test_wrong_digest) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.160s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/handoff-compare/compare_handoff.py",
+        "demo"
+      ],
+      "workspace": "test/scratch/line2-source-check",
+      "exit_code": 0,
+      "stdout": "{\n  \"added\": [\n    {\n      \"bytes\": 42,\n      \"path\": \"PROPOSED-HANDOFF-NOTE.md\",\n      \"sha256\": \"41cb9f38d4c1bc9e7a6b74dcd71b4ee02ae6f6959c5429a4b0a47b3fc7f0d321\"\n    }\n  ],\n  \"after\": {\n    \"archive_bytes\": 13470,\n    \"archive_sha256\": \"9209579ba85e9bc81c51fdb66319a1e7769d2e51e8c9f5bc2dcca11d52edb64a\",\n    \"file_count\": 3,\n    \"payload_bytes\": 12645,\n    \"trusted_digest_matched\": false\n  },\n  \"before\": {\n    \"archive_bytes\": 13181,\n    \"archive_sha256\": \"aaa03a258268263186f610e17ad8ede6851c8597b70a7ec29ae6b283f72f60bb\",\n    \"file_count\": 2,\n    \"payload_bytes\": 12603,\n    \"trusted_digest_matched\": false\n  },\n  \"counts\": {\n    \"added\": 1,\n    \"modified\": 0,\n    \"removed\": 0,\n    \"unchanged\": 2\n  },\n  \"demo\": \"real inherited bundle versus an in-memory proposed note addition\",\n  \"format\": \"handoff-comparison-v1\",\n  \"modified\": [],\n  \"note\": \"Integrity is not authenticity without independently trusted archive hashes. Renames are reported as removal plus addition; payload code is never executed.\",\n  \"payload_byte_delta\": 42,\n  \"removed\": [],\n  \"same_archive\": false,\n  \"same_payload\": false,\n  \"unchanged\": [\n    \"README.md\",\n    \"handoff.py\"\n  ],\n  \"verified\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "check": "record schema, SHA-256 link, wall copies, unchanged goal and 22 older records",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

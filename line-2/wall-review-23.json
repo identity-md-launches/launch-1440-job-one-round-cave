@@ -1,0 +1,50 @@
+{
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "PNG",
+  "mode": "RGB",
+  "png_bytes": 3941426,
+  "sha256": "760213442076abc1dc1d273d6d95f9ee7f24413c8b209152d077757b465a57be",
+  "thumbnail_dimensions": [
+    512,
+    512
+  ],
+  "thumbnail_format": "JPEG",
+  "thumbnail_bytes": 73386,
+  "addition_patch": [
+    245,
+    180,
+    535,
+    335
+  ],
+  "changed_pixels": 43669,
+  "unchanged_pixels_outside_patch": true,
+  "ancestor_record": "dist/line-2/22.json",
+  "ancestor_sha256": "f0a9380166244daf5b0487fcb6c9e7d129879add000deb83522e75030069ee62",
+  "wall_paths": [
+    "artifacts/line-2/wall.png",
+    "artifacts/line-2/wall-v3.png"
+  ],
+  "thumbnail_path": "dist/line-2/23.jpg",
+  "generator": "built-in image_gen.imagegen edit",
+  "preservation": "Only the generated addition on unpainted rock retained with a 12-pixel alpha feather using ffmpeg; original decoded pixels retained everywhere outside patch.",
+  "manual_review": {
+    "digits_per_visible_hand": [
+      5,
+      5
+    ],
+    "new_hands_or_handprints": 0,
+    "pepe_identity": "Inherited broad mouth and heavy-lidded eyes preserved",
+    "pigments": [
+      "charcoal",
+      "yellow ochre",
+      "red ochre",
+      "bare stone"
+    ],
+    "prohibited_marks_observed": false
+  },
+  "unmet_visual_requirements": [],
+  "limitations": "Local visual inspection is not independent certification. Rock inside the addition patch is generated and not pixel-identical to the ancestor."
+}

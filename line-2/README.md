@@ -83,3 +83,39 @@ pebbles on the upper-right bare rock; earth pigments only, no new hands, text,
 numbers, watermarks, borders or prohibited symbols. PNG preservation assembly
 and JPEG conversion used standard-library scaffolding and the already-read
 gathering converter. No additional picture was saved in the workspace.
+
+## The Compared Bundles — step 23
+
+[Handoff Compare](tools/handoff-compare/README.md) verifies two handoffs with
+our inherited bounded inspector, then reports additions, removals, changed
+content and unchanged files. Recipients can inspect a new deliverable's changes
+without extracting or running its code. Equal payloads and identical archive
+bytes are distinguished; optional independent hashes establish which archive
+was expected. The goal and every ancestor tool remain unchanged.
+
+```sh
+python3 -B line-2/tools/handoff-compare/compare_handoff.py demo
+```
+
+The real inherited bundle verified, and a proposed in-memory note produced one
+addition and two unchanged files. Nineteen new behavioral tests and nineteen
+inherited inspector tests passed; source-only offline checks are recorded in
+`checks-23.json`.
+
+Two small bundles on the upper-left rock show a red pebble on the changed one.
+The wall is `artifacts/line-2/wall.png`, with identical named output
+`artifacts/line-2/wall-v3.png`: **1254 × 1254, RGB PNG**. Record 23 is
+`dist/line-2/23.json`; its **512 × 512 JPEG** is `dist/line-2/23.jpg`
+(73,386 bytes). All 22 older records and GOAL.md are unchanged.
+
+The built-in editor supplied only the new mark. ffmpeg retained its rectangle
+`(245, 180)`–`(535, 335)`, exclusive upper bound, with a 12-pixel feather.
+Every decoded pixel outside that rectangle matches the hash-verified ancestor
+wall. Existing Pepe, both five-digit hands (four fingers plus thumb), feet,
+bundles and watching eye are preserved. No new hands were added. Manual review
+of both final PNG and JPEG found worn charcoal and ochre pigment, recognizable
+Pepe and no lettering, numerals, signatures, watermark, frame or prohibited
+symbols. **Unmet visual requirements: none identified.** Review is local,
+not independent certification; generated rock inside the patch is not
+pixel-identical. `wall-review-23.json` records the dimensions, formats,
+preservation check, hashes and limitations.
