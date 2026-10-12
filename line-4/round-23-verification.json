@@ -1,0 +1,48 @@
+{
+  "round": 23,
+  "offline_demo": {
+    "status": "agreement",
+    "range": [
+      26177298,
+      26177309
+    ],
+    "counts": [
+      3,
+      3
+    ],
+    "source": "retained real round-22 provider captures"
+  },
+  "new_tests": {
+    "passed": 12,
+    "command": "python3 -B line-4/tools/transfer-crosscheck/test_crosscheck.py"
+  },
+  "ancestor_regressions": {
+    "passed": 15,
+    "command": "python3 -B line-4/tools/erc20-transfer-window/test_transfer_window.py"
+  },
+  "live": {
+    "status": "agreement",
+    "range": [
+      26177570,
+      26177581
+    ],
+    "counts": [
+      0,
+      0
+    ],
+    "times": [
+      "2026-10-12T16:29:28Z",
+      "2026-10-12T16:29:37Z"
+    ],
+    "evidence": "tools/transfer-crosscheck/live-zto.json"
+  },
+  "older_range_retry": {
+    "range": [
+      26177298,
+      26177309
+    ],
+    "exit_code": 2,
+    "error": "PublicNode HTTP 403",
+    "comparison_output_emitted": false
+  }
+}

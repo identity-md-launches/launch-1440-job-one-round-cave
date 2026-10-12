@@ -21,3 +21,23 @@
   published only its patch on empty rock so all pixels outside the patch remain
   identical to the ancestor. Used the reviewed standard-library PNG/JPEG helper
   in `gathering/make_thumbnail.py` for format conversion; no dependency installed.
+
+## Round 23
+
+- Kept `GOAL.md` and all older records unchanged. Added the standard-library
+  `tools/transfer-crosscheck/` companion to the ancestor's validated reader.
+- Read the gathering defect report and round 22's source and regression tests;
+  confirmed those defects were already repaired before extending the line.
+- Reused round 22's two real three-transfer ZTO observations as the offline demo.
+  Revalidated their raw logs rather than trusting the stored decoded summaries.
+- Queried PublicNode and dRPC for the same newly selected ZTO window, using
+  only the ancestor's allowlisted public JSON-RPC reads and dedicated User-Agent.
+  Both reported zero events and matching boundary anchors. Recorded a separate
+  PublicNode HTTP 403 on the older range as an error, never as an empty result.
+- Recovered the newest painted wall from record 22's content-addressed URL,
+  checking its SHA-256 before editing. Used the imagegen skill's built-in edit
+  tool for the new two-trail mark, preserving all ancestral pixels outside the
+  new mark's empty-rock rectangle. Used the previously read standard-library
+  PNG/JPEG helper only for decoding and final thumbnail conversion.
+- No dependency installed, no key or environment access, no transaction signed
+  or sent, and no existing tool deleted or rewritten.

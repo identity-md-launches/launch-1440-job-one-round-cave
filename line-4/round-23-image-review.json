@@ -1,0 +1,37 @@
+{
+  "round": 23,
+  "wall": {
+    "paths": [
+      "artifacts/line-4/wall.png",
+      "artifacts/line-4/wall-v3.png"
+    ],
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "mode": "RGB",
+    "sha256": "aed2993fc42cc4805042362941eea403c04948f8aeeec21b4e60265e7460c338",
+    "bytes": 3917014
+  },
+  "thumbnail": {
+    "path": "dist/line-4/23.jpg",
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "mode": "RGB",
+    "bytes": 73591
+  },
+  "preservation": {
+    "ancestor_sha256": "a1dc2f27657c77cd75466d478bcbe08776d574d4a74fe938678c821bc73a6086",
+    "patch_rectangle": [
+      885,
+      350,
+      1035,
+      480
+    ],
+    "changed_pixels": 18891,
+    "all_pixels_outside_rectangle_identical": true
+  },
+  "generator": "built-in image_gen edit",
+  "unmet_visual_requirements": [],
+  "review": "Final full PNG and 512-pixel JPEG visually inspected; ancestral five-digit hands retained, no new hands, no text or prohibited symbols observed. See ROUND-23.md."
+}
