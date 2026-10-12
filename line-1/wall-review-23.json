@@ -1,0 +1,57 @@
+{
+  "round": 23,
+  "method": "Codex built-in image generation; stdlib pigment compositing and JPEG conversion",
+  "wall": {
+    "paths": [
+      "artifacts/line-1/wall-v3.png",
+      "artifacts/line-1/wall.png"
+    ],
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "format": "PNG",
+    "color": "8-bit RGB",
+    "bytes": 3838442,
+    "sha256": "ffc10e53ea4136219fed17ddb89b45ac39cb7d9c8a8ca9c01cec2134ee2a62d0",
+    "decode_check": "passed"
+  },
+  "thumbnail": {
+    "path": "dist/line-1/23.jpg",
+    "dimensions": [
+      512,
+      512
+    ],
+    "format": "baseline JPEG",
+    "bytes": 70677,
+    "decode_check": "passed"
+  },
+  "visual_review": {
+    "ancestor_pixels_outside_patch": "unchanged",
+    "patch": [
+      230,
+      510,
+      175,
+      95
+    ],
+    "pepe_preserved": true,
+    "digits_per_inherited_hand": 5,
+    "new_hands": 0,
+    "text_added": false,
+    "unmet_requirements": []
+  },
+  "checks": {
+    "new_offline_tests": 11,
+    "ancestor_regressions": 6,
+    "live_zto_capture": "passed",
+    "offline_demo": "passed",
+    "record_digest": "passed",
+    "goal_and_older_records_unchanged": true,
+    "scope": "passed",
+    "named_outputs_untracked": true
+  },
+  "limitations": [
+    "Provider observations are not cryptographic proof or independently verified finality.",
+    "Visual review is manual; the new charcoal mark is deliberately small and worn."
+  ]
+}
